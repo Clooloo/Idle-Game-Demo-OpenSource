@@ -1,0 +1,406 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://Images/hitbtn.png" type="Texture" id=2]
+[ext_resource path="res://Images/hitbtnpress.png" type="Texture" id=3]
+[ext_resource path="res://Images/hitbtnhover.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=5]
+[ext_resource path="res://Images/1.png" type="Texture" id=6]
+[ext_resource path="res://Images/1dis.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Warrior.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Warani.gd" type="Script" id=9]
+[ext_resource path="res://Images/1act.png" type="Texture" id=10]
+[ext_resource path="res://Images/1fir.png" type="Texture" id=11]
+[ext_resource path="res://Images/2.png" type="Texture" id=12]
+[ext_resource path="res://Images/2dis.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Ninja.gd" type="Script" id=14]
+[ext_resource path="res://Images/2act.png" type="Texture" id=15]
+[ext_resource path="res://Images/2fir.png" type="Texture" id=16]
+[ext_resource path="res://Images/3.png" type="Texture" id=17]
+[ext_resource path="res://Images/3dis.png" type="Texture" id=18]
+[ext_resource path="res://Scripts/Knight.gd" type="Script" id=19]
+[ext_resource path="res://Images/3act.png" type="Texture" id=20]
+[ext_resource path="res://Images/3fir.png" type="Texture" id=21]
+[ext_resource path="res://Images/4.png" type="Texture" id=22]
+[ext_resource path="res://Images/4dis.png" type="Texture" id=23]
+[ext_resource path="res://Scripts/Mage.gd" type="Script" id=24]
+[ext_resource path="res://Images/4act.png" type="Texture" id=25]
+[ext_resource path="res://Images/4fir.png" type="Texture" id=26]
+[ext_resource path="res://Images/5.png" type="Texture" id=27]
+[ext_resource path="res://Images/5dis.png" type="Texture" id=28]
+[ext_resource path="res://Scripts/Dragon.gd" type="Script" id=29]
+[ext_resource path="res://Images/5act.png" type="Texture" id=30]
+[ext_resource path="res://Images/5fir.png" type="Texture" id=31]
+[ext_resource path="res://Images/6.png" type="Texture" id=32]
+[ext_resource path="res://Images/6dis.png" type="Texture" id=33]
+[ext_resource path="res://Scripts/King.gd" type="Script" id=34]
+[ext_resource path="res://Images/6act.png" type="Texture" id=35]
+[ext_resource path="res://Images/6fir.png" type="Texture" id=36]
+[ext_resource path="res://Images/enemy/ene1.png" type="Texture" id=37]
+[ext_resource path="res://Images/enemy/ene1dis.png" type="Texture" id=38]
+[ext_resource path="res://Scripts/Enemy1.gd" type="Script" id=39]
+[ext_resource path="res://Images/ui/bare.png" type="Texture" id=40]
+[ext_resource path="res://Images/ui/barred.png" type="Texture" id=41]
+[ext_resource path="res://Images/items/ruby_old.png" type="Texture" id=42]
+[ext_resource path="res://Images/items/ruby_olddis.png" type="Texture" id=43]
+[ext_resource path="res://Scripts/Healbtn.gd" type="Script" id=44]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=45]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=46]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="main" type="Control"]
+margin_left = -7.0
+margin_top = -8.0
+margin_right = 645.0
+margin_bottom = 368.0
+script = ExtResource( 1 )
+
+[node name="F" type="TextureButton" parent="." groups=["persistent"]]
+margin_left = 27.9736
+margin_top = 251.634
+margin_right = 106.974
+margin_bottom = 328.634
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Warrior" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 312.708
+margin_top = -138.662
+margin_right = 344.708
+margin_bottom = -106.662
+disabled = true
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
+script = ExtResource( 8 )
+
+[node name="Warriorlabel" type="Label" parent="F/Warrior"]
+margin_left = -2.03838
+margin_top = -40.9025
+margin_right = 37.9617
+margin_bottom = -26.9025
+
+[node name="Warriorcost" type="Label" parent="F/Warrior"]
+margin_left = -1.76421
+margin_top = -22.0977
+margin_right = 38.2357
+margin_bottom = -8.09768
+
+[node name="Warani" type="KinematicBody2D" parent="F/Warrior"]
+position = Vector2( -100, -25 )
+script = ExtResource( 9 )
+
+[node name="Warani" type="AnimatedSprite" parent="F/Warrior/Warani"]
+position = Vector2( -185.83, 45.8066 )
+frames = SubResource( 1 )
+animation = "normal"
+playing = true
+
+[node name="Ninja" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 315.105
+margin_top = -45.0516
+margin_right = 347.105
+margin_bottom = -13.0516
+disabled = true
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[node name="Ninjalabel" type="Label" parent="F/Ninja"]
+margin_left = -3.43725
+margin_top = -40.1886
+margin_right = 36.5627
+margin_bottom = -26.1886
+
+[node name="Ninjacost" type="Label" parent="F/Ninja"]
+margin_left = -6.44759
+margin_top = -25.7087
+margin_right = 33.552
+margin_bottom = -11.7087
+
+[node name="Ninani" type="AnimatedSprite" parent="F/Ninja"]
+visible = false
+position = Vector2( -159.051, -33.9699 )
+frames = SubResource( 2 )
+animation = "normal"
+playing = true
+
+[node name="Knight" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 318.13
+margin_top = 33.785
+margin_right = 350.13
+margin_bottom = 65.785
+disabled = true
+texture_normal = ExtResource( 17 )
+texture_disabled = ExtResource( 18 )
+script = ExtResource( 19 )
+
+[node name="Knightlabel" type="Label" parent="F/Knight"]
+margin_left = -2.51452
+margin_top = -42.7189
+margin_right = 37.4855
+margin_bottom = -28.7188
+
+[node name="Knightcost" type="Label" parent="F/Knight"]
+margin_left = -3.85345
+margin_top = -17.7959
+margin_right = 36.146
+margin_bottom = -3.79594
+
+[node name="Kniani" type="AnimatedSprite" parent="F/Knight"]
+visible = false
+position = Vector2( -136.929, -119.094 )
+frames = SubResource( 3 )
+animation = "normal"
+frame = 1
+playing = true
+centered = false
+
+[node name="Mage" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 449.126
+margin_top = -143.233
+margin_right = 481.126
+margin_bottom = -111.233
+disabled = true
+texture_normal = ExtResource( 22 )
+texture_disabled = ExtResource( 23 )
+script = ExtResource( 24 )
+
+[node name="Magelabel" type="Label" parent="F/Mage"]
+margin_left = -2.25607
+margin_top = -43.5023
+margin_right = 37.7439
+margin_bottom = -29.5023
+
+[node name="Magecost" type="Label" parent="F/Mage"]
+margin_left = -1.37568
+margin_top = -19.6941
+margin_right = 38.624
+margin_bottom = -5.69406
+
+[node name="Magani" type="AnimatedSprite" parent="F/Mage"]
+visible = false
+position = Vector2( -247.912, 35.7262 )
+frames = SubResource( 4 )
+animation = "normal"
+frame = 1
+playing = true
+
+[node name="Dragon" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 450.939
+margin_top = -37.734
+margin_right = 482.939
+margin_bottom = -5.73397
+disabled = true
+texture_normal = ExtResource( 27 )
+texture_disabled = ExtResource( 28 )
+script = ExtResource( 29 )
+
+[node name="Dragonlabel" type="Label" parent="F/Dragon"]
+margin_left = -3.38058
+margin_top = -47.0184
+margin_right = 36.6194
+margin_bottom = -33.0184
+
+[node name="Dragoncost" type="Label" parent="F/Dragon"]
+margin_left = -3.81388
+margin_top = -24.14
+margin_right = 36.1861
+margin_bottom = -10.14
+
+[node name="Draani" type="AnimatedSprite" parent="F/Dragon"]
+visible = false
+position = Vector2( -324.496, -77.8558 )
+frames = SubResource( 5 )
+animation = "normal"
+playing = true
+
+[node name="King" type="TextureButton" parent="F" groups=["persistent"]]
+margin_left = 456.408
+margin_top = 43.0055
+margin_right = 488.408
+margin_bottom = 75.0055
+disabled = true
+texture_normal = ExtResource( 32 )
+texture_disabled = ExtResource( 33 )
+script = ExtResource( 34 )
+
+[node name="Kinglabel" type="Label" parent="F/King"]
+margin_left = 1.91695
+margin_top = -44.2607
+margin_right = 41.917
+margin_bottom = -30.2607
+
+[node name="Kingcost" type="Label" parent="F/King"]
+margin_left = -1.93101
+margin_top = -23.1637
+margin_right = 38.0686
+margin_bottom = -9.16369
+
+[node name="Kinani" type="AnimatedSprite" parent="F/King"]
+visible = false
+position = Vector2( -244.199, -169.011 )
+frames = SubResource( 6 )
+frame = 1
+playing = true
+
+[node name="Enemy1" type="TextureButton" parent="F"]
+margin_left = 131.4
+margin_top = -153.661
+margin_right = 195.4
+margin_bottom = -89.6609
+texture_normal = ExtResource( 37 )
+texture_disabled = ExtResource( 38 )
+script = ExtResource( 39 )
+
+[node name="ene1healthbar" type="TextureProgress" parent="F/Enemy1"]
+margin_left = 3.0
+margin_top = -16.0
+margin_right = 57.0
+margin_bottom = -2.0
+max_value = 100000.0
+value = 10000.0
+texture_under = ExtResource( 40 )
+texture_progress = ExtResource( 41 )
+
+[node name="Healbtn" type="TextureButton" parent="F"]
+margin_left = 537.892
+margin_top = -36.1002
+margin_right = 577.892
+margin_bottom = 3.89984
+texture_normal = ExtResource( 42 )
+texture_disabled = ExtResource( 43 )
+script = ExtResource( 44 )
+
+[node name="Player" type="TextureButton" parent="F"]
+margin_left = 147.679
+margin_top = 1.75809
+margin_right = 187.679
+margin_bottom = 41.7581
+script = ExtResource( 45 )
+
+[node name="PlayerHealth" type="TextureProgress" parent="F/Player"]
+margin_left = -12.7533
+margin_top = 55.8987
+margin_right = 39.2467
+margin_bottom = 69.8987
+texture_under = ExtResource( 40 )
+texture_progress = ExtResource( 41 )
+
+[node name="Walletlabel" type="Label" parent="F"]
+margin_left = 14.9641
+margin_top = 88.2131
+margin_right = 54.9641
+margin_bottom = 102.213
+
+[node name="GlobalTimer" type="Timer" parent="."]
+autostart = true
+script = ExtResource( 46 )
+
+[node name="buyMultiplier" type="TextureButton" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 266.0
+margin_bottom = 157.0
+
+[connection signal="button_down" from="F" to="F" method="_on_F_button_down"]
+[connection signal="button_up" from="F" to="F" method="_on_F_button_up"]
+[connection signal="enable_button" from="F" to="F/Warrior" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Ninja" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Knight" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Mage" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Dragon" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/King" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Enemy1" method="_on_F_enable_button"]
+[connection signal="enable_button" from="F" to="F/Healbtn" method="_on_F_enable_button"]
+[connection signal="heal_player" from="F" to="F/Player" method="_on_F_heal_player"]
+[connection signal="pressed" from="F" to="F/Enemy1" method="_on_F_pressed"]
+[connection signal="button_down" from="F/Warrior" to="F" method="_on_Warrior_button_down"]
+[connection signal="button_down" from="F/Warrior" to="F/Warrior" method="_on_Warrior_button_down"]
+[connection signal="respect_from_warriors" from="F/Warrior" to="F" method="_on_Warrior_respect_from_warriors"]
+[connection signal="respect_from_warriors" from="F/Warrior" to="F/Enemy1" method="_on_Warrior_respect_from_warriors"]
+[connection signal="button_down" from="F/Ninja" to="F" method="_on_Ninja_button_down"]
+[connection signal="button_down" from="F/Ninja" to="F/Ninja" method="_on_Ninja_button_down"]
+[connection signal="respect_from_ninjas" from="F/Ninja" to="F" method="_on_Ninja_respect_from_ninjas"]
+[connection signal="respect_from_ninjas" from="F/Ninja" to="F/Enemy1" method="_on_Ninja_respect_from_ninjas"]
+[connection signal="button_down" from="F/Knight" to="F" method="_on_Knight_button_down"]
+[connection signal="button_down" from="F/Knight" to="F/Knight" method="_on_Knight_button_down"]
+[connection signal="respect_from_knights" from="F/Knight" to="F" method="_on_Knight_respect_from_knights"]
+[connection signal="respect_from_knights" from="F/Knight" to="F/Enemy1" method="_on_Knight_respect_from_knights"]
+[connection signal="button_down" from="F/Mage" to="F" method="_on_Mage_button_down"]
+[connection signal="button_down" from="F/Mage" to="F/Mage" method="_on_Mage_button_down"]
+[connection signal="respect_from_mages" from="F/Mage" to="F" method="_on_Mage_respect_from_mages"]
+[connection signal="respect_from_mages" from="F/Mage" to="F/Enemy1" method="_on_Mage_respect_from_mages"]
+[connection signal="button_down" from="F/Dragon" to="F" method="_on_Dragon_button_down"]
+[connection signal="button_down" from="F/Dragon" to="F/Dragon" method="_on_Dragon_button_down"]
+[connection signal="respect_from_dragons" from="F/Dragon" to="F" method="_on_Dragon_respect_from_dragons"]
+[connection signal="respect_from_dragons" from="F/Dragon" to="F/Enemy1" method="_on_Dragon_respect_from_dragons"]
+[connection signal="button_down" from="F/King" to="F" method="_on_King_button_down"]
+[connection signal="button_down" from="F/King" to="F/King" method="_on_King_button_down"]
+[connection signal="respect_from_kings" from="F/King" to="F" method="_on_King_respect_from_kings"]
+[connection signal="respect_from_kings" from="F/King" to="F/Enemy1" method="_on_King_respect_from_kings"]
+[connection signal="damagedragon" from="F/Enemy1" to="F/Dragon" method="_on_Enemy1_damagedragon"]
+[connection signal="damageking" from="F/Enemy1" to="F/King" method="_on_Enemy1_damageking"]
+[connection signal="damageknight" from="F/Enemy1" to="F/Knight" method="_on_Enemy1_damageknight"]
+[connection signal="damagemage" from="F/Enemy1" to="F/Mage" method="_on_Enemy1_damagemage"]
+[connection signal="damageninja" from="F/Enemy1" to="F/Ninja" method="_on_Enemy1_damageninja"]
+[connection signal="damageplayer" from="F/Enemy1" to="F/Player" method="_on_Enemy1_damageplayer"]
+[connection signal="damagewarrior" from="F/Enemy1" to="F/Warrior" method="_on_Enemy1_damagewarrior"]
+[connection signal="button_down" from="F/Healbtn" to="F" method="_on_Healbtn_button_down"]
+[connection signal="timeout" from="GlobalTimer" to="F/Warrior" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Ninja" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Knight" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Mage" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/Dragon" method="_on_GlobalTimer_timeout"]
+[connection signal="timeout" from="GlobalTimer" to="F/King" method="_on_GlobalTimer_timeout"]
